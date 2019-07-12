@@ -18,7 +18,7 @@ public class NpcAddon extends JavaPlugin {
 			new Metrics(this);
 			Register.events();
 			Register.types();
-			//YamlSaver.loadNpcs();
+			YamlSaver.loadNpcs();
 			getServer().getPluginManager().registerEvents(new PacketListener(), this);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -27,7 +27,7 @@ public class NpcAddon extends JavaPlugin {
 	}
 	
 	public void onDisable(){
-		//YamlSaver.saveNPCs();
+		YamlSaver.saveNPCs();
 	}
 	
 	public static NpcAddon getInstance() {
